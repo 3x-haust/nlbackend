@@ -1,13 +1,10 @@
 # NLBackend
 
+**English** · [한국어](./README.ko.md)
+
 > **Call your backend in natural language.** A local LLM picks one of *your* registered actions and extracts its arguments — your code validates (zod), authorizes, and executes. No hardcoded keyword routing, no cloud required.
 
-<p>
-  <a href="https://www.npmjs.com/package/nlbackend"><img alt="npm" src="https://img.shields.io/npm/v/nlbackend.svg"></a>
-  <a href="./LICENSE"><img alt="license" src="https://img.shields.io/npm/l/nlbackend.svg"></a>
-  <img alt="node" src="https://img.shields.io/node/v/nlbackend.svg">
-  <img alt="types" src="https://img.shields.io/badge/types-TypeScript-blue.svg">
-</p>
+[![npm](https://img.shields.io/npm/v/nlbackend.svg)](https://www.npmjs.com/package/nlbackend) [![license](https://img.shields.io/npm/l/nlbackend.svg)](./LICENSE) ![node](https://img.shields.io/node/v/nlbackend.svg) ![types](https://img.shields.io/badge/types-TypeScript-blue.svg)
 
 ```ts
 await nl.req("이름이 유성윤인 유저 찾아줘");
@@ -199,4 +196,4 @@ A response is always one of:
 
 ## License
 
-[MIT](./LICENSE) © 3x-haust
+[MIT](./LICENSE) © 3xhaust

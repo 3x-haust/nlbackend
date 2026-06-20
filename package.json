@@ -4,7 +4,7 @@
   "description": "Natural-language backend: a local LLM picks one of your registered actions and extracts its arguments — your code validates (zod), authorizes, and executes. Project-agnostic, local-first (Ollama), no hardcoded keyword routing.",
   "type": "module",
   "license": "MIT",
-  "author": "3x-haust",
+  "author": "3xhaust",
   "homepage": "https://github.com/3x-haust/nlbackend#readme",
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "dist",
     "src",
     "README.md",
+    "README.ko.md",
     "LICENSE"
   ],
   "sideEffects": false,
