@@ -1,0 +1,89 @@
+[
+  {
+    "text": "유저 다 찾아줘",
+    "expectedType": "action",
+    "expectedAction": "users.list",
+    "expectedArgs": {}
+  },
+  {
+    "text": "이름이 유성윤인 유저 찾아줘",
+    "expectedType": "action",
+    "expectedAction": "users.findByName",
+    "expectedArgs": {
+      "name": "유성윤"
+    }
+  },
+  {
+    "text": "유성윤이라는 사용자 검색해줘",
+    "expectedType": "action",
+    "expectedAction": "users.findByName",
+    "expectedArgs": {
+      "name": "유성윤"
+    }
+  },
+  {
+    "text": "sungyoon@example.com 이메일 쓰는 유저 찾아줘",
+    "expectedType": "action",
+    "expectedAction": "users.findByEmail",
+    "expectedArgs": {
+      "email": "sungyoon@example.com"
+    }
+  },
+  {
+    "text": "user_1 유저 정보 보여줘",
+    "expectedType": "action",
+    "expectedAction": "users.getById",
+    "expectedArgs": {
+      "id": "user_1"
+    }
+  },
+  {
+    "text": "48ysfat 세션 토큰 24435 맞는지 확인해줘",
+    "expectedType": "action",
+    "expectedAction": "auth.verifySessionToken",
+    "expectedArgs": {
+      "sessionId": "48ysfat",
+      "token": "24435"
+    }
+  },
+  {
+    "text": "유성윤에게 배정된 할 일 보여줘",
+    "expectedType": "action",
+    "expectedAction": "todos.listByAssignee",
+    "expectedArgs": {
+      "assigneeName": "유성윤"
+    }
+  },
+  {
+    "text": "오늘 마감인 작업만 보여줘",
+    "expectedType": "action",
+    "expectedAction": "todos.listDueToday",
+    "expectedArgs": {}
+  },
+  {
+    "text": "재고 10개 이하인 상품 찾아줘",
+    "expectedType": "action",
+    "expectedAction": "products.findLowStock",
+    "expectedArgs": {
+      "threshold": 10
+    }
+  },
+  {
+    "text": "최근 실패한 배포 보여줘",
+    "expectedType": "action",
+    "expectedAction": "deployments.listRecentFailures",
+    "expectedArgs": {}
+  },
+  {
+    "text": "유성윤 찾아줘",
+    "expectedType": "needs_clarification"
+  },
+  {
+    "text": "토큰 맞는지 확인해줘",
+    "expectedType": "needs_clarification"
+  },
+  {
+    "text": "유성윤 빼고 모든 유저 삭제해줘",
+    "expectedType": "unknown_action"
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "name": "nlbackend",
+  "version": "0.1.0",
+  "description": "Natural-language backend: a local LLM picks one of your registered actions and extracts its arguments — your code validates (zod), authorizes, and executes. Project-agnostic, local-first (Ollama), no hardcoded keyword routing.",
+  "type": "module",
+  "license": "MIT",
+  "author": "3x-haust",
+  "homepage": "https://github.com/3x-haust/nlbackend#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3x-haust/nlbackend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/3x-haust/nlbackend/issues"
+  },
+  "keywords": [
+    "llm",
+    "natural-language",
+    "backend",
+    "ollama",
+    "local-llm",
+    "zod",
+    "intent-parser",
+    "action-router",
+    "function-calling",
+    "ai",
+    "agents"
+  ],
+  "packageManager": "pnpm@11.6.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "model:setup": "node scripts/setup-local-model.mjs",
+    "model:check": "node scripts/setup-local-model.mjs --check",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "prepack": "npm run build",
+    "example:api": "pnpm --filter @nlbackend/example-nestjs-sqlite-api dev",
+    "example:web": "pnpm --filter @nlbackend/example-react-client dev",
+    "example:build": "pnpm --filter @nlbackend/example-nestjs-sqlite-api build && pnpm --filter @nlbackend/example-react-client build",
+    "example:test": "pnpm --filter @nlbackend/example-nestjs-sqlite-api test",
+    "eval:parser": "tsx scripts/eval-parser.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "fastify": "^5.4.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

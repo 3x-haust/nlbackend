@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+coverage/
+*.log
+examples/nestjs-sqlite-api/data/*.sqlite
+examples/nestjs-sqlite-api/data/*.sqlite-*
+.omc
+.forge
